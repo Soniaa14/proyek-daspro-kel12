@@ -150,13 +150,13 @@ int simpanLaporanKeFile() {
 
     fclose(file);
     printf("Laporan transaksi berhasil disimpan ke 'laporan_transaksi.txt'.\n");
-    return 1; // Berhasil menyimpan laporan
+    return 1; 
 }
 
 int laporanTransaksi() {
     if (total_transaksi == 0) {
         printf("Belum ada transaksi.\n");
-        return 0; // Tidak ada transaksi
+        return 0; 
     }
 
     printf("Laporan Transaksi:\n");
@@ -167,10 +167,9 @@ int laporanTransaksi() {
                transaksi[i].kursi, transaksi[i].total_harga);
     }
 
-    // Simpan laporan ke file
     simpanLaporanKeFile();
 
-    return 1; // Berhasil menampilkan laporan
+    return 1;
 }
 
 int main() {

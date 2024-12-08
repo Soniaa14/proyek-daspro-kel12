@@ -32,13 +32,13 @@ int total_transaksi = 0;
 int bersihkanBuffer() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
-    return 1; // Mengembalikan 1 sebagai tanda selesai
+    return 1; 
 }
 
 int tambahRute() {
     if (total_rute >= MAX_RUTE) {
         printf("Kapasitas rute penuh.\n");
-        return 0; // Gagal menambah rute
+        return 0; 
     }
 
     Rute r;
@@ -62,19 +62,19 @@ int tambahRute() {
     if (scanf("%d", &r.harga) != 1) {
         printf("Input harga tidak valid.\n");
         bersihkanBuffer();
-        return 0; // Gagal menambah rute
+        return 0; 
     }
     bersihkanBuffer();
 
     rutes[total_rute++] = r;
     printf("Rute berhasil ditambahkan.\n");
-    return 1; // Berhasil menambah rute
+    return 1; 
 }
 
 int tampilkanRute() {
     if (total_rute == 0) {
         printf("Belum ada rute yang tersedia.\n");
-        return 0; // Tidak ada rute
+        return 0; 
     }
 
     printf("Daftar Rute:\n");
@@ -83,7 +83,7 @@ int tampilkanRute() {
                rutes[i].asal, rutes[i].tujuan, rutes[i].tanggal,
                rutes[i].waktu, rutes[i].harga);
     }
-    return 1; // Berhasil menampilkan rute
+    return 1; 
 }
 
 int pesanTiket() {
@@ -96,17 +96,17 @@ int pesanTiket() {
     if (scanf("%d", &rute_index) != 1 || rute_index < 1 || rute_index > total_rute) {
         printf("Nomor rute tidak valid.\n");
         bersihkanBuffer();
-        return 0; // Gagal memesan tiket
+        return 0; 
     }
     bersihkanBuffer();
 
-    rute_index--; // Adjust to 0-based index
+    rute_index; 
 
     printf("Masukkan nomor kursi (1-%d): ", MAX_KURSI);
     if (scanf("%d", &kursi) != 1 || kursi < 1 || kursi > MAX_KURSI || kursi_terpesan[rute_index][kursi - 1]) {
         printf("Kursi tidak valid atau sudah dipesan.\n");
         bersihkanBuffer();
-        return 0; // Gagal memesan tiket
+        return 0; 
     }
     bersihkanBuffer();
 
@@ -130,14 +130,14 @@ int pesanTiket() {
     kursi_terpesan[rute_index][kursi - 1] = 1;
 
     printf("Tiket berhasil dipesan.\n");
-    return 1; // Berhasil memesan tiket
+    return 1; 
 }
 
 int simpanLaporanKeFile() {
     FILE *file = fopen("laporan_transaksi.txt", "w");
     if (!file) {
         printf("Gagal membuka file untuk menulis laporan.\n");
-        return 0; // Gagal menyimpan laporan
+        return 0; 
     }
 
     fprintf(file, "Laporan Transaksi:\n");

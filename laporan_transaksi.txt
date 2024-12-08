@@ -1,2 +1,5 @@
 Laporan Transaksi:
-1. nicky aja (ID: i112) - Rute: medan ke sibolga - Kursi: 2 - Total: Rp50000
+1. manullang (ID: 1234) - Rute: medan ke dolok sanggul - Kursi: 2 - Total: Rp120000
+2. nicky (ID: 234) - Rute: medan ke dolok sanggul - Kursi: 3 - Total: Rp120000
+3. manullang (ID: 1234) - Rute: balige ke medan - Kursi: 2 - Total: Rp70000
+4. manullang (ID: 1235) - Rute: medan ke siantar - Kursi: 3 - Total: Rp-1662697472

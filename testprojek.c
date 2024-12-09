@@ -15,7 +15,7 @@ typedef struct {
 } Rute;
 
 typedef struct {
-    char nama[50];
+    char nama[50]; 
     char id[15];
     char telepon[15];
     int rute_index;
